@@ -1,0 +1,378 @@
+/* its for login */
+
+.register{
+        background: linear-gradient(#06152c,#06152c);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .register .container{
+        background: #ffffff;
+        /* height: 500px; */
+        width: 30%;
+        box-shadow: 0px 2px 4px gray;
+    }
+    .register .cc{
+        background:linear-gradient( -45deg,#5a37d9  75%, #6145e5 25%) ;
+        /* background:black; */
+        /* opacity: 0.5; */
+        /* filter: brightness(); */
+        height: 60px;
+        margin: 20px 0;
+        text-align: center;
+        color: #ffffff;
+        /* padding: 12px 0 0 0; */
+        transform: scale(1.2);
+        position: relative;
+        z-index: 10;
+    }
+    .register .cc p:nth-child(1){
+        font-size: 25px;
+        margin-bottom: initial;
+        margin-top: initial;
+    }
+    .register .cc p:nth-child(2){
+        font-size: 13px;
+        line-height: 1;
+        margin-top: 0;
+    }
+  
+    .register  .ca{
+        --v:38px;
+        position: absolute;
+        /* background: #6044e4; */
+        background:linear-gradient(45deg, #1531aa 50%, #fff 50%);
+        height: var(--v);
+        width: var(--v);
+        transform: rotate(45deg) translate3d(-40px, 15px, 10px);
+        /* margin-top: -20px; */
+        margin: -15px 0 2px 8px;
+        /* overflow: hidden; */
+    }
+
+    .register  .ca.cb {
+        background:linear-gradient(45deg, #fff 50%,#1531aa 50%);
+        transform: rotate(45deg) translate3d(249px, -276px, 10px);
+    }
+    
+
+    .register form{
+        margin-top: 60px;
+    }
+
+    .register form .form-control{
+       margin-top: 20px;
+       border-radius: 0;
+       border: none;
+       border-bottom: 2px solid rgba(128, 128, 128, 0.486);
+       /* width: max-content; */
+    }
+    .register form .form-control:focus{
+        box-shadow: none;
+        color: red;
+    }
+
+    .register form div:nth-child(5){
+        margin-top: 15px;
+    }
+    /* .register form div:nth-child(5) label{
+        transform: translatey(-15px)
+    } */
+
+    .register form div:nth-child(5) label span{
+        /* transform: translatey(-15px) */
+        color: #46b9f6;
+    }
+  
+    
+    /* .register form div:nth-child(6) button{
+      background: #5936d8;
+      border-radius: 0;
+      color: #ffffff;
+      font-size: 17px;
+      font-weight: 500;
+    } */
+
+    .register form div:nth-child(6) input{
+        background: #5936d8;
+        border-radius: 0;
+        color: #ffffff;
+        font-size: 17px;
+        font-weight: 500;
+      }
+
+      
+    .register .bottom{
+
+        background: linear-gradient(to right,#1445c8,#1331a9);
+        text-align: center;
+        color: #ffffff;
+        padding: 10px 0 0 0;
+    }
+
+
+
+    
+/* its for registration */
+
+    .resgistration{
+        background: linear-gradient(to left,#3f269e,#9434f7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    /* if we give the value at % percentage than it will adjust accordingly screen size or page will be responsive */
+    .resgistration .container{
+        /* background: #ffffff; */
+        width: 50%;
+        border-radius:50px;
+        box-shadow: 0px 2px 4px gray;
+        /* box-shadow: 1px 2px 2px 1px gray; */
+        font-family: sans-serif;
+    }
+    
+    /* you can apply image as well as backgroun color in similar class
+    using this .resgistration .c1 whole commented element   */
+    
+    /* we have to comment all the height after using the content 
+    it wont interrupt when have to make the responsive site */
+    
+    
+    .resgistration .c1{
+        /* background: red; */
+        background: linear-gradient(to right,#8754e1,#9b59f1);
+        /* height: 400px; */
+        border-radius: 50px 0 0 50px;
+        box-shadow: 1px 0px 2px gray;
+        /* background: url(../img/website.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center; */
+        /* width: max-content; */
+    }
+    
+    .resgistration .c1 .img_a{
+        /* background: red; */
+        /* background: linear-gradient(to right,#8754e1,#9b59f1); */
+        height: 400px;
+        /* border-radius: 50px 0 0 50px; */
+        /* box-shadow: 1px 0px 2px gray; */
+        background: url(../img/website.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        /* width: max-content; */
+    }
+    
+    .resgistration .c1 div:nth-child(2) p:nth-child(1){
+        color: #ffffff;
+        text-align: center;
+    }
+    
+    .resgistration .c2{
+    background: #ffffff;
+    border-radius:0 50px 50px 0;
+    font-family: sans-serif;
+    }
+    
+    .resgistration .c2 .cc{
+        background: linear-gradient(#6c49bf,#a15af6);
+        width: max-content;
+        color: #ffffff;
+        padding: 5px 30px;
+        border-radius: 0 50px 50px 0;
+        margin-top: 20px;
+        transform: translateX(-12px)
+    }
+    
+    .resgistration .c2 form div:nth-child(1){
+        color: #4e44b4;
+        text-align: center;
+        margin-top: 50px;    
+    }
+    .resgistration .c2 form input{
+        margin-bottom: 20px;
+        color: #4f47ae;
+    }
+    .resgistration .c2 form::placeholder{
+        color: #4f47ae;
+    }
+    
+    .resgistration .c2 form .form-control{
+        border-radius: 0;
+        border: none;
+        border-bottom: 2px solid #827edd;
+    }
+    .resgistration .c2 form input:focus{
+        box-shadow: none;
+    }
+    .resgistration .c2 form div:nth-child(4) .btn{
+        background: linear-gradient(to right,#7b53d8,#a059f5);
+         padding: 7px 45px;
+         /* border-radius: 50%; */
+         border-radius: 50px;
+         /* margin-top: 5px; */
+         /* text-align: center; */
+         /* margin: auto; */
+         color: #ffffff;
+    }
+    .resgistration .c2 form div:nth-child(4){
+        text-align: center;
+    }
+    
+
+    .resgistration .c2 form div:nth-child(5) a{
+        text-decoration: none;
+    }
+
+    .resgistration .c2 form div:nth-child(5) p:nth-child(1){
+      text-align: center;
+      font-size: 13px;
+        color: #4f47ae;
+        /* margin-top: 15px; */
+    }
+    .resgistration .c2 form div:nth-child(5) p:nth-child(2){
+        margin: auto;
+        text-align: center;
+        border-bottom: 2px solid #4f47ae;
+        font-size: 13px;
+        color: #4f47ae;
+        /* margin-bottom: 15px; */
+        /* margin-top: 30px; */
+        width: fit-content;
+      }
+    
+    
+  
+    
+    
+    @media (max-width:720px) {
+        
+        .resgistration {
+            padding: 50px 0;
+            height: inherit;
+        }
+        .resgistration .c1{
+            border-radius:50px 0 0 0 ;
+        }
+        .resgistration .c2{
+            border-radius: 0;
+        }
+    
+        .resgistration .c2 form div:nth-child(5) p:nth-child(2){
+            margin-top: 30px;
+            margin-bottom: 25px;
+          }
+    
+          .resgistration .container{
+            width: 80%;
+            /* padding: 50px; */
+          
+        }
+    
+    
+
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @media (max-width:720px) {
+        .register .container{
+            width: 70%;
+        }
+    }
