@@ -1,11 +1,25 @@
-<?php include_once './header.php'?>
+<?php include_once './header.php';
+
+if (isset($_GET['update'])) {
+//    echo $_GET['update'];
+   $id = $_GET['update'];
+}
+
+?>
 
     <section class="register">
         <div class="container">
             <div class="row">
                 <div class="col-lg  inner">
                     <div class="cc">
-                        <p>REGISTRATION</p>
+                        <?php 
+                        if (isset($_GET['update'])) {
+                          echo '<p>UPDATE</p>';
+                            }else {
+                                echo '<p>REGISTRATION</p>';
+                            }
+                        ?>
+                        <!-- <p>REGISTRATION</p> -->
                         <p>Enter your personal data</p>                        
                     </div>
                     <div class="ca"></div>
@@ -36,7 +50,17 @@
                         </div>
 
                         <div>
-                            <input type="submit" name="register" value="SUBMIT" class="btn float-end w-50 m-2">
+                            <?php 
+                            if (isset($_GET['update'])) {
+                                echo '<input type="hidden" name="id" value="'.$_GET['update'].'">';
+                                echo '<input  type="submit" name="up_date"
+                                value="update" class="btn float-end w-50 m-2">';
+                                  }else {
+                                      echo '<input  type="submit" name="register"
+                                      value="SUBMIT" class="btn float-end w-50 m-2">';
+                                  }
+                            ?>
+                        
                             <!-- <button type="submit" name="register" class="btn float-end w-50 m-2">SUBMIT</button> -->
                         </div>
                     </form>

@@ -35,7 +35,25 @@ if (isset($_GET['register'])) {
 
    header("location:index");
    
-}elseif (isset($_GET['Login'])) {
+}elseif (isset($_GET['delete'])) {
+   $sql = "DELETE FROM `php_insert` WHERE `php_insert`.`id` = ".$_GET['delete']."";
+   $result=mysqli_query($conn,$sql);
+  header('location:temp');
+
+
+}elseif (isset($_GET['up_date'])) {
+   // echo $_GET['update'];
+   $u_id = $_GET['id'];
+   $u_name=  $_GET['fullname'];
+   $u_email=  $_GET['email'];
+   $u_address=  $_REQUEST['address'];
+   $u_phone=  $_GET['phone'];
+
+   $sql = "UPDATE `php_insert` SET `fullname`='".$u_name."',`email`='".$u_email."',`address`='".$u_address."',`phone`='".$u_phone."' WHERE `id` ='".$u_id."' ";
+   $result=mysqli_query($conn,$sql);
+   header('location:temp');
+}
+elseif (isset($_GET['Login'])) {
   $name = $_GET['Username'];
   $pass = $_GET['Password'];
 
