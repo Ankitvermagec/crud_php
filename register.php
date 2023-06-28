@@ -1,9 +1,19 @@
 <?php include_once './header.php';
-
+$conn = mysqli_connect('localhost','root','','CRUD_PHP');
 if (isset($_GET['update'])) {
 //    echo $_GET['update'];
    $id = $_GET['update'];
+
+   $sql = "SELECT * FROM `php_insert` WHERE `id`='".$id."' ";
+
+   $result=mysqli_query($conn,$sql);
+  
+   $row=mysqli_fetch_row($result);
+//    var_dump($row);
+  $_SESSION['row']=$row;
+//   session_destroy();
 }
+
 
 ?>
 
@@ -28,19 +38,56 @@ if (isset($_GET['update'])) {
 
                     <form action="./conn.php" method="get">
                         <div>
-                            <input type="text" class="form-control" placeholder="Full name" name="fullname" id="">
+                            <input type="text" class="form-control" value="<?php 
+                            if (isset($_GET['update'])) {
+                                if (isset($_SESSION['row'])) {
+                                    // var_dump($_SESSION['row']);
+                                    echo $_SESSION['row'][1];
+                                    
+                                }
+                                
+                                  }
+                            ?>" placeholder="Full name" name="fullname" id="">
                         </div>
     
                         <div>
-                            <input type="email" class="form-control" placeholder="email" name="email" id="">
+                            <input type="email" class="form-control" value="<?php 
+                            if (isset($_GET['update'])) {
+                                if (isset($_SESSION['row'])) {
+                                    // var_dump($_SESSION['row']);
+                                    echo $_SESSION['row'][2];
+                                    
+                                }
+                                
+                                  } ?>" placeholder="email" name="email" id="">
                         </div>
     
                         <div>
-                            <input type="text" class="form-control" placeholder="Address" name="address" id="">
+                            <input type="text" class="form-control" 
+                            value="<?php 
+                            if (isset($_GET['update'])) {
+                                if (isset($_SESSION['row'])) {
+                                    // var_dump($_SESSION['row']);
+                                    echo $_SESSION['row'][3];
+                                    
+                                }
+                                
+                                  } ?>"
+                            placeholder="Address" name="address" id="">
                         </div>
                         
                         <div>
-                            <input type="text" class="form-control" placeholder="phone" name="phone" id="">
+                            <input type="text" class="form-control" 
+                            value="<?php 
+                            if (isset($_GET['update'])) {
+                                if (isset($_SESSION['row'])) {
+                                    // var_dump($_SESSION['row']);
+                                    echo $_SESSION['row'][4];
+                                    
+                                }
+                                
+                                  } ?>"
+                            placeholder="phone" name="phone" id="">
                         </div>
 
                         <div>
@@ -55,6 +102,8 @@ if (isset($_GET['update'])) {
                                 echo '<input type="hidden" name="id" value="'.$_GET['update'].'">';
                                 echo '<input  type="submit" name="up_date"
                                 value="update" class="btn float-end w-50 m-2">';
+                                
+                                
                                   }else {
                                       echo '<input  type="submit" name="register"
                                       value="SUBMIT" class="btn float-end w-50 m-2">';

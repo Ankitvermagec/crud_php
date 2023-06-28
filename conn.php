@@ -57,11 +57,23 @@ elseif (isset($_GET['Login'])) {
   $name = $_GET['Username'];
   $pass = $_GET['Password'];
 
-  $sql="SELECT * FROM `php_insert` WHERE `fullname`='$name' && `email`= '$pass' ";
+  if ($name&&$pass) {
+   $sql="SELECT * FROM `php_insert` WHERE `fullname`='".$name."' && `email`= '".$pass."' ";
    $result=mysqli_query($conn,$sql);
   
-   $row=mysqli_fetch_all($result);
-   var_dump($row);
+   // $row=mysqli_fetch_all($result);
+   // var_dump($row);
+       if ($row=mysqli_fetch_row($result)) {
+           header('location:temp');
+        }else {
+         header('location:index');
+        }
+   
+  } else {
+   header('location:index');
+  }
+  
+ 
 }
  else {
     
