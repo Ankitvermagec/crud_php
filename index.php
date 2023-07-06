@@ -18,7 +18,7 @@
                 <input type="text" class="form-control" placeholder="Username" name="Username" id="">
             </div>
             <div>
-                <input type="text" class="form-control" placeholder="Password" name="Password" id="">
+                <input type="text" class="form-control" placeholder="Email" name="Password" id="">
             </div>
             <div><input type="submit" class="btn" name="Login" value="Login">
                 <!-- <button class="btn">Login</button> -->
