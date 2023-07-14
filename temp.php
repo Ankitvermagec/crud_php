@@ -10,8 +10,31 @@
         font-family: sans-serif;
         font-size: 20px;
         margin: auto;
-       
+        color: azure;
     }
+</style>
+
+<style>
+    .back_video video{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        /* background-repeat: no-repeat; */
+        position: fixed;
+
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+    }
+    
+    @media (min-aspect-ratio: 16/9) {
+        /* .back_video  video{
+            width: 100%;
+            height: auto;
+        } */
+    }
+
 </style>
 
 <?php
@@ -36,11 +59,18 @@ $result=mysqli_query($conn,$sql);
 
 <section  class="fetch_all">
     <div class="container">
-
+ 
+    <div class="back_video">
+        <video  autoplay loop muted plays-inline >
+        <source sizes="" src="./assets/img/Animated.webm" srcset="" type="video/mp4">
+    </video>
     <?php 
 
     while ($row=mysqli_fetch_row($result)) {
-        echo '<div class="row cc mt-5">
+        echo '
+        
+
+        <div class="row cc mt-5">
         <div class="col">
           <div>Name:'.$row[1].'</div>
           <div>Email:'.$row[2].'</div>
@@ -54,13 +84,15 @@ $result=mysqli_query($conn,$sql);
 
           
         </div>
-    </div>';
+    </div>
+    
+    ';
     }
     
     ?>
 
 
-        
+</div>   
     </div>
 </section>
 <?php include_once './footer.php'?>
